@@ -1,0 +1,19 @@
+{
+  "name": "williamhodicq_3_04012021",
+  "version": "1.0.0",
+  "description": "OhmyFood Projet",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Williamhod/WilliamHodicq_3_04012021.git"
+  },
+  "author": "Hodicq.William",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Williamhod/WilliamHodicq_3_04012021/issues"
+  },
+  "homepage": "https://github.com/Williamhod/WilliamHodicq_3_04012021#readme"
+}
