@@ -1,0 +1,4 @@
+@mixin dc($color) { 
+    background: $color;
+    color: text($color);
+  }

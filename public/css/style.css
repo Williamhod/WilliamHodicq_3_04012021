@@ -1,10 +1,47 @@
 /*Colors*/
-h1, h2, h3, h4 {
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#bloc_page {
+  max-width: 430px;
+  background-color: white;
+  margin: 0 0;
+}
+
+a {
+  text-decoration: none;
+  background: #fff;
+  color: #000;
+  background: none;
+}
+
+footer {
+  background: #333;
+  color: #FFF;
+}
+
+h2, h3, h4 {
   font-family: "Shrikhand", cursive;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_welcomepage {
+  width: 50%;
 }
 
 .img {
@@ -30,6 +67,71 @@ body {
 
 .img_delice {
   background-image: url("../../public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.search_field {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  background-color: #eaeaea;
+}
+
+.search_container {
+  width: 100%;
+  height: 50px;
+  box-shadow: 0px -4px 3px #d5d5d5;
+}
+
+.loca-icone {
+  padding-left: 100px;
+  font-size: 16px;
+}
+
+#search_box {
+  width: 50%;
+  height: 100%;
+  background-color: #eaeaea;
+  border: 0;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.discovery_topic {
+  height: 300px;
+  width: 100%;
+  margin: 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+.discovery_topic > p {
+  text-align: center;
+  width: 95%;
+  font-size: 20px;
+  margin: 0px 5px 20px 5px;
+  color: #5a5151;
+}
+.discovery_topic > button {
+  height: 50px;
+  width: 220px;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  border: none;
+  margin-top: 20px;
+  font-size: 16px;
+  box-shadow: 1px 2px 2px #5a5151;
+}
+
+h1 {
+  text-align: center;
+  font-weight: none;
+  width: 100%;
+  font-size: 25px;
+  margin: 30px 0 10px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

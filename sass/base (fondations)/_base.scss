@@ -1,0 +1,22 @@
+body{
+    overflow-x: hidden; 
+    width: 100%; 
+}
+
+#bloc_page{
+    max-width: 430px;  
+    background-color: white;  
+    margin: 0 0;
+}
+
+
+a{
+    text-decoration: none;
+    @include dc(#fff);
+    background: none;
+}
+
+footer{
+    @include dc(#333);
+}
+
