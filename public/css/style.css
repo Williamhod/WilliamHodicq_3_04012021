@@ -1,4 +1,18 @@
+@charset "UTF-8";
 /*Colors*/
+/*
+@mixin computer-only {
+    @media screen and (max-width: map-get($breakpoints, computer)){
+        @content;
+   }
+}
+
+@mixin pad-only {
+    @media screen and (max-width: map-get($breakpoints, pad)){
+        @content;
+   }
+}
+*/
 body {
   overflow-x: hidden;
   width: 100%;
@@ -8,6 +22,9 @@ body {
 #bloc_page {
   max-width: 430px;
   margin: 0 0;
+  /*    @import computer-only{
+          margin:0 0;
+      }*/
 }
 
 a {
@@ -113,6 +130,26 @@ li > a > i {
 
 .img_delice {
   background-image: url("../../public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.fa-heart {
+  font-size: 30px;
+  opacity: 1;
+}
+
+.fa-heart-full {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+.fa-heart-full:hover {
+  opacity: 1;
+  color: blueviolet;
+  transition-duration: 2.5s;
+}
+.fa-heart-full:active {
+  opacity: 1;
+  color: blueviolet;
+  transition-duration: 2.5s;
 }
 
 .search_field {
@@ -305,16 +342,6 @@ h1 {
   width: 15px;
   margin-right: 30px;
 }
-.card_text > div > i {
-  font-size: 24px;
-}
-.card_text > div > i:hover {
-  cursor: pointer;
-  background: linear-gradient(#FF79DA, #9356DC);
-}
-.card_text > div > i:focus {
-  outline: none;
-}
 
 .img_menu {
   height: 335px;
@@ -345,15 +372,18 @@ h1 {
   font-weight: normal;
   font-size: 27px;
   padding-top: 25px;
-  width: 290px;
+  width: 300px;
   margin: 0;
 }
 .menu_section > div > div {
-  margin-top: 25px;
+  margin-top: 54px;
   width: 20px;
 }
 .menu_section > div > div > i {
   font-size: 25px;
+}
+.menu_section > div > div > .fa-heart-full {
+  margin-top: 3px;
 }
 .menu_section > article > h2 {
   font-size: 15px;
@@ -367,36 +397,89 @@ h1 {
   padding-bottom: 5px;
   border-bottom: #99E2D0 3px solid;
 }
-.menu_section > article > div {
+.menu_section > article > .menu_lane {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.menu_section > article > .menu_lane:hover {
+  transform: scale(1.03);
+  transition-duration: 0.4s;
+}
+.menu_section > article > .menu_lane:hover .check_animation {
+  opacity: 1;
+  width: 15%;
+}
+.menu_section > article > .menu_lane:hover .fa-check-circle {
+  transition-duration: 1s;
+  transform: rotate(360deg);
+  opacity: 1;
+}
+.menu_section > article > .menu_lane:focus .check_animation {
+  opacity: 1;
+  width: 15%;
+}
+.menu_section > article > .menu_lane:focus .fa-check-circle {
+  opacity: 1;
+}
+.menu_section > article > .menu_lane > .menu_text {
   background-color: white;
   box-shadow: 1px 1px 10px #c3c0c0;
   height: 80px;
   display: flex;
   flex-wrap: wrap;
-  margin: 20px auto;
-  width: 93%;
+  margin: 0 0 0 15px;
+  width: 90%;
   border-radius: 15px 15px 15px 15px;
 }
-.menu_section > article > div > h3 {
+.menu_section > article > .menu_lane > .menu_text:hover {
+  width: 80%;
+  transition-duration: 1s;
+}
+.menu_section > article > .menu_lane > .menu_text > h3 {
   width: 80%;
   margin: 15px 0 0 10px;
   font-size: 18px;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.menu_section > article > div > p {
-  margin: -10px 0 0 10px;
+.menu_section > article > .menu_lane > .menu_text > p {
+  margin: -12px 0 0 10px;
   font-size: 15px;
   font-weight: lighter;
-  width: 80%;
+  width: 75%;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.menu_section > article > div > span {
+.menu_section > article > .menu_lane > .menu_text > span {
+  width: 20px;
   width: 20px;
   float: right;
+  margin: -12px 0 0 0;
+  position: relative;
+}
+.menu_section > article > .menu_lane > .menu_text > span > p {
+  margin: 0;
 }
 
-.menu_rate {
-  width: 20px;
-  float: right;
-  margin: -10px 0 0 0;
+.check_animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #99E2D0;
+  font-size: 25px;
+  height: 80px;
+  width: 0;
+  opacity: 0;
+  margin-left: -20px;
+  border-radius: 0px 15px 15px 0px;
+}
+.check_animation > i {
+  transform: rotate(90deg);
+  opacity: 0;
 }
 
 #container_btn-older {

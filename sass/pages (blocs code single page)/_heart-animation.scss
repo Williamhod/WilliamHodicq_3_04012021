@@ -1,0 +1,20 @@
+.fa-heart{ 
+    font-size: 30px;
+    opacity: 1;
+}   
+
+.fa-heart-full{ 
+    opacity: 0;
+    transform: translateY(-30px);
+    &:hover{ 
+        opacity: 1;
+        color: blueviolet;
+        transition-duration: 2.5s;
+    } 
+    &:active{
+        opacity: 1;
+        color: blueviolet;
+        transition-duration: 2.5s;
+
+    }
+}
