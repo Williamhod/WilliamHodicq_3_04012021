@@ -66,7 +66,7 @@
 
                 & .check_animation{
                     opacity: 1;
-                    width: 15%;
+                    width: 20%;
                 }
 
                 & .fa-check-circle{
@@ -75,20 +75,20 @@
                     opacity: 1;
                 }
             }
-            &:focus{
+            &:active{
                 & .check_animation{
                     opacity: 1;
-                    width: 15%;
+                    width: 20%;
                 }
                 & .fa-check-circle{
                     opacity: 1;
                 }
             }
-
+            
             &>.menu_text{
                 background-color: white;
                 box-shadow: 1px 1px 10px rgb(195, 192, 192);
-                height: 80px;
+                height: 85px;
                 display: flex;
                 flex-wrap: wrap;
                 margin:0 0 0 15px;
@@ -96,15 +96,16 @@
                 border-radius: 15px 15px 15px 15px;
                 
                 &:hover{
-                    width: 80%;
+                    width: 75%;
                     transition-duration: 1s;
                 }
                 &>h3{
                     width: 80%;
                     margin: 15px 0 0 10px;
                     font-size: 18px;
-                    overflow: hidden;
+                    overflow: clip;
                     white-space:nowrap;
+                    text-overflow: ellipsis;
                 }
 
                 &>p{
@@ -112,12 +113,12 @@
                     font-size: 15px;
                     font-weight: lighter;
                     width: 75%;
-                    overflow: hidden;
+                    overflow: clip;
                     white-space:nowrap;
+                    text-overflow: ellipsis; 
                 }
 
                 &>span{
-                    width: 20px;
                     width: 20px;
                     float: right;
                     margin: -12px 0 0 0;
@@ -132,6 +133,13 @@
     }     
 }
 
+#menu_text_height{
+    height: 100px;
+}
+
+#check_animation_height{
+    height: 100px;
+}
 
 .check_animation{
     display: flex;
@@ -140,7 +148,7 @@
     color: white;
     background-color: $Tertiary;
     font-size: 25px;
-    height: 80px;
+    height: 85px;
     width: 0;
     opacity: 0;
     margin-left: -20px;
