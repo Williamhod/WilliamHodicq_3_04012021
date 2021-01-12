@@ -34,3 +34,22 @@ header{
 
     }
 }
+
+@media only screen and (min-width: $computer) {
+
+    header{
+        height: 210px;
+    }
+}
+
+@media only screen and (min-width: $pad) {
+
+    header{
+        height: 175px;
+
+    }
+    
+
+}
+
+

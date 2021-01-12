@@ -37,3 +37,53 @@ h1{
     font-size: 25px;
     margin:30px 0 10px 0;
 }
+
+@media only screen and (min-width: $computer) {
+
+    .discovery_topic{
+        height:420px ;
+
+        &>p{
+            
+            width: 95%;
+            font-size: 30px;;
+            margin:20px 5px 20px 5px;
+            
+        }
+        &>h1{
+            font-size: 35px;
+            margin-top: 45px;
+        }
+ 
+        &>button{
+            height: 70px;
+            width: 300px;
+            font-size: 25px;
+        }
+    }     
+        
+}
+
+@media only screen and (min-width: $pad) {
+
+    .discovery_topic{
+        height:360px ;
+        &>p{
+            
+            width: 95%;
+            font-size: 25px;;
+            margin:20px 5px 20px 5px;
+            
+        }
+        &>h1{
+            font-size: 30px;
+            margin-top: 45px;
+        }
+ 
+        &>button{
+            height: 60px;
+            width: 250px;
+            font-size: 20px;
+        }
+    }   
+}

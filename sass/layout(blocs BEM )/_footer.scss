@@ -27,3 +27,39 @@ li{
     }
 }
 
+@media only screen and (min-width: $computer) {
+
+    footer{
+        align-items: center;
+        
+        &>h4{
+            font-size: 25px;
+            margin: 10px 0 0 0;
+        }
+        &>nav{
+            width: 95%;
+            margin-bottom: 15px;
+            &>ul{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 5px;
+            }
+        }
+    }
+
+
+    li{
+        width: 270px;
+        margin:0 0;
+        font-size: 20px;
+        text-align: center;
+        &>a{
+            &>i{
+                width: 10px;
+                font-size: 20px;
+            }
+        }
+    }
+}

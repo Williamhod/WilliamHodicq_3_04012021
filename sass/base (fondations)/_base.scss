@@ -24,3 +24,22 @@ footer{
     @include dc(#333);
 }
 
+
+
+@media only screen and (min-width: $pad) {
+
+    #bloc_page{
+        max-width: $pad;
+        margin: 0 0;
+    }
+
+}
+
+@media only screen and (min-width: $computer) {
+
+    #bloc_page{
+        max-width: $computer;
+        margin: auto auto;
+    }
+
+}
