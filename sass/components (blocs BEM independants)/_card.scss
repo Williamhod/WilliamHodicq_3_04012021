@@ -67,6 +67,10 @@
             
 @media only screen and (min-width: $computer) {
     .card_section{
+
+        &>h2{
+            margin-left: 20px;
+        }
         &>div{
             display: flex;
             flex-direction: row;
@@ -74,7 +78,7 @@
             justify-content: space-around;
             height: 900px;
             
-    
+            
             &>article{
                 width: 45%;
                 height: 350px;

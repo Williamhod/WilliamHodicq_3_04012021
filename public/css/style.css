@@ -253,7 +253,7 @@ li > a > i {
     font-size: 27px;
   }
 }
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 2000) {
   .search_field {
     height: 80px;
   }
@@ -404,6 +404,7 @@ h1 {
 @media only screen and (min-width: 1310px) {
   .operation > h2 {
     font-size: 27px;
+    margin-left: 20px;
   }
 
   .operation_list {
@@ -496,6 +497,9 @@ h1 {
 }
 
 @media only screen and (min-width: 1310px) {
+  .card_section > h2 {
+    margin-left: 20px;
+  }
   .card_section > div {
     display: flex;
     flex-direction: row;

@@ -24,9 +24,10 @@
    border: 0;
    padding-left: 10px;
    font-size: 16px;
-   &:focus{
-    outline: none;
-}
+
+    &:focus{
+        outline: none;
+    }
 }
 
 @media only screen and (min-width: $computer) {
@@ -52,7 +53,7 @@
     } 
 }
 
-@media only screen and (min-width: $pad) {
+@media only screen and (min-width: 2000) {
 
     .search_field{
 
