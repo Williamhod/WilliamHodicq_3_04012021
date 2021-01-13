@@ -39,17 +39,52 @@ header{
 
     header{
         height: 210px;
+
+        &>nav>a>img{
+            width:30%;
+        }
+    }
+    .logo_welcomepage{
+        width: 40%;
+        
+    }
+    
+    .back_cross{
+        
+        margin:0 430px 0 10px;
+        &>i{
+            font-size: 33px;
+    
+        }
     }
 }
 
-@media only screen and (min-width: $pad) {
+@media only screen and (min-width: $pad) and (max-width: $computer - 1px) {
 
     header{
         height: 175px;
 
+        &>nav>a>img{
+            width:25%;
+        }
+    }
+    .logo_welcomepage{
+        width: 35%;
+        
     }
     
-
+    .back_cross{
+        
+        margin:0 245px 0 10px;
+        &>i{
+            font-size: 25px;
+    
+        }
+    }
 }
+
+    
+
+
 
 

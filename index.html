@@ -9,11 +9,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/95054a2ff0.js" crossorigin="anonymous"></script>
+    <script src="./public/JS/jquery-3.5.1.min.js"></script>
+    <script src="./public/JS/script.js"></script>
+    
     <title>OhMyFood</title>
 </head>
 
 <body>
     <div id="bloc_page">
+        <div id="loader_animation">
+            <span class="loader_border"></span>
+            <h1 class="loader_title">Ohmyfood</h1>
+        </div>
+        
         <header>
             <img src="public/img/logo/ohmyfood.png" alt="logo du site" class="logo_welcomepage">
         </header>
@@ -22,13 +30,13 @@
         <div class="search_field">
             <form action="post" class="search_container">
                 <span class="loca-icone"><i class="fas fa-map-marker-alt"></i></span>
-                <input id="search_box"type="search" id="" maxlength="70" value="Paris,Belleville">
+                <input id="search_box" type="search" maxlength="70" value="Paris,Belleville">
             </form>
         </div>
 
 
         <section class="discovery_topic">
-            <h1>Réservez le menu qui </br>vous convient</h1>
+            <h1>Réservez le menu qui </br> vous convient</h1>
             <p>Découvrez des restaurants d'exception,<br>
                 séléctionnés par nos soins.
             </p>

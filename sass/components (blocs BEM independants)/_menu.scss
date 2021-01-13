@@ -5,7 +5,7 @@
     width:100%;
     height: auto;
 
-    &>div{
+    &>.name_restaurant{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -36,13 +36,12 @@
             }
     }
     
-    &>article{
+    &>div>article{
 
         &>.menu_title{
             font-size: 15px;
             font-weight: normal;
             margin-left: 10px;
-            font-size: 15px;
             margin-top: 30px;
             margin-bottom: 15px;
 
@@ -94,7 +93,7 @@
                     width: 80%;
                     margin: 15px 0 0 10px;
                     font-size: 18px;
-                    overflow: clip;
+                    overflow: hidden;
                     white-space:nowrap;
                     text-overflow: ellipsis;
                 }
@@ -104,7 +103,7 @@
                     font-size: 15px;
                     font-weight: lighter;
                     width: 75%;
-                    overflow: clip;
+                    overflow: hidden;
                     white-space:nowrap;
                     text-overflow: ellipsis; 
                 }
@@ -157,15 +156,125 @@
     width: 100%;
     margin-bottom: 0;
     margin-top: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &>.older{
+        height: 45px;
+        width: 200px;
+        color: white;
+        background: linear-gradient($Secondary,$Primary);
+        border-radius: 25px;
+        margin: auto auto;
+        border: none;
+        font-size: 16px;
+        box-shadow: 1px 2px 2px rgb(90, 81, 81);
+    }
 }
-.older{
-    height: 45px;
-    width: 200px;
-    color: white;
-    background: linear-gradient($Secondary,$Primary);
-    border-radius: 25px;
-    margin: auto auto;
-    border: none;
-    font-size: 16px;
-    box-shadow: 1px 2px 2px rgb(90, 81, 81);
+
+@media only screen and (min-width: $computer) {
+
+
+    .menu_section{
+
+        &>.name_restaurant{
+    
+            &>h1{
+                font-size: 35px;
+                width: 370px;
+                }
+            &>div{
+                width: 25px;
+                &>i{
+                    font-size: 30px;
+                }
+               
+            }
+        }
+        .menu_list{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+        }
+        
+        &>div>article{
+
+            width: 33%;
+            height: 400px;
+            
+            &>.menu_title{
+                font-size: 23px;
+                margin-left: 30px;
+            }
+
+            &>.menu_lane{
+                
+                &>.menu_text{
+                    &>h3{
+                        margin: 15px 0 0 10px;
+                        font-size: 20px;
+                    }
+    
+                    &>p{
+                        font-size: 16px;
+                        width: 80%;
+                    }
+                }
+            }
+        }     
+    }
 }
+
+@media only screen and (min-width: $pad) and (max-width: $computer - 1px) {
+
+    .menu_section{
+
+        &>.name_restaurant{
+    
+            &>h1{
+                font-size: 30px;
+                width: 350px;
+                }
+            &>div{
+                width: 25px;
+                &>i{
+                    font-size: 28px;
+                }
+               
+            }
+        }
+        .menu_list{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+    
+        }
+        
+        &>div>article{
+ 
+            width: 80%;
+            &>.menu_title{
+                font-size: 20px;
+                margin-left: 20px;
+            }
+
+            &>.menu_lane{
+
+                &>.menu_text{
+                    &>h3{
+                        font-size: 18px;
+                    }
+    
+                    &>p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }     
+    }
+}
+
+

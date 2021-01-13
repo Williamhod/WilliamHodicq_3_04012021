@@ -24,7 +24,14 @@ footer{
     @include dc(#333);
 }
 
+@media only screen and (min-width: $computer) {
 
+    #bloc_page{
+        max-width: $computer;
+        margin: auto auto;
+    }
+
+}
 
 @media only screen and (min-width: $pad) and (max-width: $computer - 1px) {
 
@@ -36,11 +43,3 @@ footer{
 
 }
 
-@media only screen and (min-width: $computer) {
-
-    #bloc_page{
-        max-width: $computer;
-        margin: auto auto;
-    }
-
-}

@@ -49,17 +49,17 @@ footer {
   color: #FFF;
 }
 
+@media only screen and (min-width: 1310px) {
+  #bloc_page {
+    max-width: 1310px;
+    margin: auto auto;
+  }
+}
 @media only screen and (min-width: 760px) and (max-width: 1309px) {
   #bloc_page {
     width: 100%;
     max-width: 1309px;
     margin: 0;
-  }
-}
-@media only screen and (min-width: 1310px) {
-  #bloc_page {
-    max-width: 1310px;
-    margin: auto auto;
   }
 }
 h4 {
@@ -107,10 +107,38 @@ header > nav > a > img {
   header {
     height: 210px;
   }
+  header > nav > a > img {
+    width: 30%;
+  }
+
+  .logo_welcomepage {
+    width: 40%;
+  }
+
+  .back_cross {
+    margin: 0 430px 0 10px;
+  }
+  .back_cross > i {
+    font-size: 33px;
+  }
 }
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 760px) and (max-width: 1309px) {
   header {
     height: 175px;
+  }
+  header > nav > a > img {
+    width: 25%;
+  }
+
+  .logo_welcomepage {
+    width: 35%;
+  }
+
+  .back_cross {
+    margin: 0 245px 0 10px;
+  }
+  .back_cross > i {
+    font-size: 25px;
   }
 }
 footer {
@@ -247,6 +275,86 @@ li > a > i {
   transition-duration: 2.5s;
 }
 
+#loader_animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+#loader_animation h1 {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+}
+#loader_animation > .loader_border {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #9356DC;
+  animation: spin 3s linear infinite;
+}
+#loader_animation > .loader_border:before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #FF79DA;
+  animation: spin 4s linear infinite;
+}
+#loader_animation > .loader_border:after {
+  content: "";
+  position: absolute;
+  top: -75px;
+  left: -75px;
+  right: -75px;
+  bottom: -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: blueviolet;
+  animation: spin 2.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 .search_field {
   width: 100%;
   height: 50px;
@@ -343,7 +451,7 @@ li > a > i {
 
 h1 {
   text-align: center;
-  font-weight: none;
+  font-weight: 600;
   width: 100%;
   font-size: 25px;
   margin: 30px 0 10px 0;
@@ -590,7 +698,7 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    height: 660px;
+    height: 700px;
   }
   .card_section > div > article {
     width: 45%;
@@ -637,7 +745,7 @@ h1 {
   width: 100%;
   height: auto;
 }
-.menu_section > div {
+.menu_section > .name_restaurant {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -645,7 +753,7 @@ h1 {
   height: 50px;
   margin-bottom: 40px;
 }
-.menu_section > div > h1 {
+.menu_section > .name_restaurant > h1 {
   text-align: start;
   margin-left: 20px;
   font-family: "Shrikhand";
@@ -655,29 +763,28 @@ h1 {
   width: 300px;
   margin: 0;
 }
-.menu_section > div > div {
+.menu_section > .name_restaurant > div {
   margin-top: 54px;
   width: 20px;
 }
-.menu_section > div > div > i {
+.menu_section > .name_restaurant > div > i {
   font-size: 25px;
 }
-.menu_section > div > div > .fa-heart-full {
+.menu_section > .name_restaurant > div > .fa-heart-full {
   margin-top: 3px;
 }
-.menu_section > article > .menu_title {
+.menu_section > div > article > .menu_title {
   font-size: 15px;
   font-weight: normal;
   margin-left: 10px;
-  font-size: 15px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
-.menu_section > article > .menu_title > .title_underline {
+.menu_section > div > article > .menu_title > .title_underline {
   padding-bottom: 5px;
   border-bottom: #99E2D0 3px solid;
 }
-.menu_section > article > .menu_lane {
+.menu_section > div > article > .menu_lane {
   cursor: pointer;
   width: 100%;
   display: flex;
@@ -685,16 +792,16 @@ h1 {
   margin: 20px 0;
   animation: 1.35s ease-out 0s 1 slide;
 }
-.menu_section > article > .menu_lane:hover .check_animation {
+.menu_section > div > article > .menu_lane:hover .check_animation {
   opacity: 1;
   width: 20%;
 }
-.menu_section > article > .menu_lane:hover .fa-check-circle {
+.menu_section > div > article > .menu_lane:hover .fa-check-circle {
   transition-duration: 1s;
   transform: rotate(360deg);
   opacity: 1;
 }
-.menu_section > article > .menu_lane > .menu_text {
+.menu_section > div > article > .menu_lane > .menu_text {
   background-color: white;
   box-shadow: 1px 1px 10px #c3c0c0;
   height: 85px;
@@ -704,34 +811,34 @@ h1 {
   width: 90%;
   border-radius: 15px 15px 15px 15px;
 }
-.menu_section > article > .menu_lane > .menu_text:hover {
+.menu_section > div > article > .menu_lane > .menu_text:hover {
   width: 75%;
   transition-duration: 1s;
 }
-.menu_section > article > .menu_lane > .menu_text > h3 {
+.menu_section > div > article > .menu_lane > .menu_text > h3 {
   width: 80%;
   margin: 15px 0 0 10px;
   font-size: 18px;
-  overflow: clip;
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu_section > article > .menu_lane > .menu_text > p {
+.menu_section > div > article > .menu_lane > .menu_text > p {
   margin: -12px 0 0 10px;
   font-size: 15px;
   font-weight: lighter;
   width: 75%;
-  overflow: clip;
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu_section > article > .menu_lane > .menu_text > span {
+.menu_section > div > article > .menu_lane > .menu_text > span {
   width: 20px;
   float: right;
   margin: -12px 0 0 0;
   position: relative;
 }
-.menu_section > article > .menu_lane > .menu_text > span > .menu_rate {
+.menu_section > div > article > .menu_lane > .menu_text > span > .menu_rate {
   margin: 0;
 }
 
@@ -766,9 +873,11 @@ h1 {
   width: 100%;
   margin-bottom: 0;
   margin-top: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.older {
+#container_btn-older > .older {
   height: 45px;
   width: 200px;
   color: white;
@@ -778,6 +887,71 @@ h1 {
   border: none;
   font-size: 16px;
   box-shadow: 1px 2px 2px #5a5151;
+}
+
+@media only screen and (min-width: 1310px) {
+  .menu_section > .name_restaurant > h1 {
+    font-size: 35px;
+    width: 370px;
+  }
+  .menu_section > .name_restaurant > div {
+    width: 25px;
+  }
+  .menu_section > .name_restaurant > div > i {
+    font-size: 30px;
+  }
+  .menu_section .menu_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu_section > div > article {
+    width: 33%;
+    height: 400px;
+  }
+  .menu_section > div > article > .menu_title {
+    font-size: 23px;
+    margin-left: 30px;
+  }
+  .menu_section > div > article > .menu_lane > .menu_text > h3 {
+    margin: 15px 0 0 10px;
+    font-size: 20px;
+  }
+  .menu_section > div > article > .menu_lane > .menu_text > p {
+    font-size: 16px;
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1309px) {
+  .menu_section > .name_restaurant > h1 {
+    font-size: 30px;
+    width: 350px;
+  }
+  .menu_section > .name_restaurant > div {
+    width: 25px;
+  }
+  .menu_section > .name_restaurant > div > i {
+    font-size: 28px;
+  }
+  .menu_section .menu_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu_section > div > article {
+    width: 80%;
+  }
+  .menu_section > div > article > .menu_title {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  .menu_section > div > article > .menu_lane > .menu_text > h3 {
+    font-size: 18px;
+  }
+  .menu_section > div > article > .menu_lane > .menu_text > p {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
