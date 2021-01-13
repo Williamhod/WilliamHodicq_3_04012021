@@ -63,3 +63,40 @@ li{
         }
     }
 }
+
+@media only screen and (min-width: $pad) and (max-width: $computer - 1px) {
+
+    footer{
+        align-items: center;
+        
+        &>h4{
+            font-size: 20px;
+            margin: 10px 0 0 0;
+        }
+        &>nav{
+            width: 95%;
+            margin-bottom: 15px;
+            &>ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 5px;
+            }
+        }
+    }
+
+
+    li{
+        width: 170px;
+        margin:0 0;
+        font-size: 14px;
+        text-align: center;
+        &>a{
+            &>i{
+                width: 5px;
+                font-size: 15px;
+            }
+        }
+    }
+}

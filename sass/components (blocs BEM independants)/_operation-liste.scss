@@ -82,7 +82,7 @@
         
 }
 
-@media only screen and (min-width: $pad) {
+@media only screen and (min-width: $pad) and (max-width: $computer - 1px) {
     .operation>h2{
         font-size: 27px;
     }

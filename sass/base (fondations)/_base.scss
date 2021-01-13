@@ -26,11 +26,12 @@ footer{
 
 
 
-@media only screen and (min-width: $pad) {
+@media only screen and (min-width: $pad) and (max-width: $computer - 1px) {
 
-    #bloc_page{
-        max-width: $pad;
-        margin: 0 0;
+    #bloc_page{ 
+        width: 100%; 
+        max-width: $computer - 1px;
+        margin: 0;
     }
 
 }

@@ -64,7 +64,7 @@ h1{
         
 }
 
-@media only screen and (min-width: $pad) {
+@media only screen and (min-width: $pad) and (max-width: $computer - 1px) {
 
     .discovery_topic{
         height:360px ;

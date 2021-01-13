@@ -53,7 +53,7 @@
     } 
 }
 
-@media only screen and (min-width: 2000) {
+@media only screen and (min-width: $pad) and (max-width: $computer - 1px) {
 
     .search_field{
 
