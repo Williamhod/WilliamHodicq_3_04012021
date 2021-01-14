@@ -3,12 +3,12 @@
     opacity: 1;
 }   
 
-.fa-heart-full{ 
+.fa-heart-full{
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-31px);
     &:hover{ 
         opacity: 1;
-        color: blueviolet;
+        color: rgb(134, 98, 167);
         transition-duration: 2.5s;
     } 
     &:active{
