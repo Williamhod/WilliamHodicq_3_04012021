@@ -318,27 +318,11 @@ li > a > i {
   animation: spin 2.5s linear infinite;
 }
 
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
@@ -828,13 +812,13 @@ h1 {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu_section > div > article > .menu_lane > .menu_text > span {
+.menu_section > div > article > .menu_lane > .menu_text > div {
   width: 20px;
   float: right;
   margin: -12px 0 0 0;
   position: relative;
 }
-.menu_section > div > article > .menu_lane > .menu_text > span > .menu_rate {
+.menu_section > div > article > .menu_lane > .menu_text > div > .menu_rate {
   margin: 0;
 }
 
