@@ -264,21 +264,17 @@ li > a > i {
 
 #loader_animation {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background-color: white;
 }
 #loader_animation h1 {
-  display: block;
   position: relative;
   left: 50%;
   top: 50%;
   width: 150px;
   height: 150px;
   margin: -75px 0 0 -75px;
-  border-radius: 50%;
 }
 #loader_animation > .loader_border {
   display: block;
@@ -760,7 +756,6 @@ li > a > i {
   display: flex;
   align-items: center;
   margin: 20px 0;
-  /*animation: 1.35s ease-out 0s 1 slide;*/
 }
 .menu_section > div > article > .menu_lane:hover .check_animation {
   opacity: 1;
