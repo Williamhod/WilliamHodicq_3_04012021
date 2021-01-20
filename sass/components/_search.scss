@@ -3,6 +3,7 @@
     height: 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 0;
     background-color: rgb(234, 234, 234);;
     
@@ -10,20 +11,28 @@
 .search_container{
     width: 100%;
     height: 50px;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0px -4px 3px rgba(213, 213, 213,);
 }
 .loca-icone{
-    padding-left: 120px;
+    
     font-size: 16px;
+    width: 15px;
+    position: relative;
+    margin-left: -7%;
+    
 }
 #search_box{
-   width: 50%;
+   width: 40%;
    height: 100%;
+   margin-left: -5%;
    background-color: rgb(234, 234, 234);
    border: 0;
    padding-left: 10px;
    font-size: 16px;
+   text-align: center;
 
     &:focus{
         outline: none;
@@ -41,12 +50,12 @@
             
             &>.loca-icone{
                 font-size: 27px;
-                margin: 0 30px 0 500px;
-                padding-left: 0;
+                margin-left: 0;
+                
                
             }
             &>#search_box{
-                
+                margin-left: -3%;
                 font-size: 27px;
             }
         }
@@ -64,7 +73,7 @@
             
             &>.loca-icone{
                 font-size: 25px;
-                margin: 0 30px 0 115px;
+                margin-left: 4%;
                 
             }
             &>#search_box{

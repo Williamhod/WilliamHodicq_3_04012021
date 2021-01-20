@@ -4,6 +4,10 @@
     width: 100%;
     background: $bgsection;
 
+    &>h2{
+        margin-left: 15px;
+    }
+
     &>div{
         display: flex;
         flex-direction: column;
