@@ -21,7 +21,7 @@ body {
 
 #bloc_page {
   max-width: 430px;
-  margin: 0 0;
+  margin: 0 auto;
 }
 
 a {
@@ -39,14 +39,14 @@ footer {
 @media only screen and (min-width: 1310px) {
   #bloc_page {
     max-width: 1310px;
-    margin: auto auto;
+    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 760px) and (max-width: 1309px) {
   #bloc_page {
     width: 100%;
     max-width: 1309px;
-    margin: 0;
+    margin: 0 auto;
   }
 }
 h4 {
@@ -347,7 +347,6 @@ li > a > i {
 .loca-icone {
   font-size: 16px;
   width: 15px;
-  position: relative;
   margin-left: -7%;
 }
 
@@ -355,7 +354,7 @@ li > a > i {
   width: 40%;
   height: 100%;
   margin-left: -5%;
-  background-color: #eaeaea;
+  background: none;
   border: 0;
   padding-left: 10px;
   font-size: 16px;
@@ -744,12 +743,11 @@ li > a > i {
 }
 .menu_section > .name_restaurant > h1 {
   text-align: start;
-  margin-left: 20px;
   font-family: "Shrikhand";
   font-weight: normal;
   font-size: 27px;
   padding-top: 25px;
-  width: 80%;
+  width: 270px;
   margin: 0;
 }
 .menu_section > .name_restaurant > div {
@@ -765,7 +763,7 @@ li > a > i {
 .menu_section > div > article > .menu_title {
   font-size: 15px;
   font-weight: normal;
-  margin-left: 20px;
+  margin-left: 10px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
@@ -774,46 +772,40 @@ li > a > i {
   border-bottom: #99E2D0 3px solid;
 }
 .menu_section > div > article > .menu_lane {
+  background-color: white;
   cursor: pointer;
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
-  margin: 20px 0;
+  margin: 20px 0 0 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px #c3c0c0;
 }
-.menu_section > div > article > .menu_lane:hover .check_animation {
-  opacity: 1;
-  width: 20%;
+.menu_section > div > article > .menu_lane:hover .check_animation, .menu_section > div > article > .menu_lane:active .check_animation {
+  width: 25%;
 }
-.menu_section > div > article > .menu_lane:hover .fa-check-circle {
-  transition-duration: 1s;
-  transform: rotate(360deg);
-  opacity: 1;
+.menu_section > div > article > .menu_lane:hover .menu_rate, .menu_section > div > article > .menu_lane:active .menu_rate {
+  width: 40px;
 }
-.menu_section > div > article > .menu_lane:active .check_animation {
-  opacity: 1;
-  width: 20%;
+.menu_section > div > article > .menu_lane:hover .menu_text, .menu_section > div > article > .menu_lane:active .menu_text {
+  width: calc(100% - 25% /* 25% check_animation width */ - 40px /* menu_rate width */  );
 }
-.menu_section > div > article > .menu_lane:active .fa-check-circle {
+.menu_section > div > article > .menu_lane:hover i, .menu_section > div > article > .menu_lane:active i {
   transition-duration: 1s;
   transform: rotate(360deg);
   opacity: 1;
 }
 .menu_section > div > article > .menu_lane > .menu_text {
-  background-color: white;
-  box-shadow: 1px 1px 10px #c3c0c0;
   height: 85px;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 0 0 15px;
-  width: 90%;
-  border-radius: 15px 15px 15px 15px;
-}
-.menu_section > div > article > .menu_lane > .menu_text:hover {
-  width: 75%;
-  transition-duration: 1s;
+  width: calc(100% - 50px);
+  border-radius: 15px 0 0 15px;
+  transition: 1s;
 }
 .menu_section > div > article > .menu_lane > .menu_text > h3 {
-  width: 80%;
+  width: 100%;
   margin: 15px 0 0 10px;
   font-size: 18px;
   overflow: hidden;
@@ -824,27 +816,19 @@ li > a > i {
   margin: -12px 0 0 10px;
   font-size: 15px;
   font-weight: lighter;
-  width: 75%;
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu_section > div > article > .menu_lane > .menu_text > div {
-  width: 20px;
-  float: right;
-  margin: -12px 0 0 0;
-  position: relative;
-}
-.menu_section > div > article > .menu_lane > .menu_text > div > .menu_rate {
-  margin: 0;
-}
 
-#menu_text_height {
-  height: 100px;
-}
-
-#check_animation_height {
-  height: 100px;
+.menu_rate {
+  width: 50px;
+  padding-top: 28px;
+  padding-right: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 1s;
 }
 
 .check_animation {
@@ -856,9 +840,7 @@ li > a > i {
   font-size: 25px;
   height: 85px;
   width: 0;
-  opacity: 0;
-  margin-left: -20px;
-  border-radius: 0px 15px 15px 0px;
+  transition: 1s;
 }
 .check_animation > i {
   transform: rotate(90deg);
@@ -883,15 +865,7 @@ li > a > i {
   margin: auto auto;
   border: none;
   font-size: 16px;
-  box-shadow: 2px 4px 4px #5a5151;
-}
-#container_btn-older > .older:hover {
-  opacity: 0.9;
-  box-shadow: 2px 4px 4px #978e8e;
-}
-#container_btn-older > .older:active {
-  opacity: 0.9;
-  box-shadow: 2px 4px 4px #978e8e;
+  box-shadow: 1px 2px 2px #5a5151;
 }
 
 @media only screen and (min-width: 1310px) {
@@ -916,6 +890,7 @@ li > a > i {
   }
   .menu_section > div > article > .menu_title {
     font-size: 23px;
+    margin-left: 30px;
   }
   .menu_section > div > article > .menu_lane > .menu_text > h3 {
     margin: 15px 0 0 10px;
