@@ -22,6 +22,7 @@ body {
 #bloc_page {
   max-width: 430px;
   margin: 0 auto;
+  position: relative;
 }
 
 a {
@@ -72,6 +73,7 @@ header > nav {
 header > nav > a {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
 }
@@ -84,7 +86,9 @@ header > nav > a > img {
 }
 
 .back_cross {
-  margin: 0 55px 0 10px;
+  position: absolute;
+  left: 0;
+  padding-left: 10px;
 }
 .back_cross > i {
   font-size: 25px;
@@ -351,13 +355,11 @@ li > a > i {
 }
 
 #search_box {
-  width: 40%;
+  width: 41%;
   height: 100%;
-  margin-left: -5%;
   background: none;
   border: 0;
-  padding-left: 10px;
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
 }
 #search_box:focus {
@@ -763,7 +765,7 @@ li > a > i {
 .menu_section > div > article > .menu_title {
   font-size: 15px;
   font-weight: normal;
-  margin-left: 10px;
+  margin-left: 7%;
   margin-top: 30px;
   margin-bottom: 15px;
 }
@@ -866,6 +868,14 @@ li > a > i {
   border: none;
   font-size: 16px;
   box-shadow: 1px 2px 2px #5a5151;
+}
+#container_btn-older > .older:hover {
+  opacity: 0.9;
+  box-shadow: 2px 4px 4px #978e8e;
+}
+#container_btn-older > .older:active {
+  opacity: 0.9;
+  box-shadow: 2px 4px 4px #978e8e;
 }
 
 @media only screen and (min-width: 1310px) {
